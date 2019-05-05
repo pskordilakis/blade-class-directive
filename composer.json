@@ -1,0 +1,51 @@
+{
+    "name": "pskordilakis/blade-class-directive",
+    "description": "Laravel blade class directive",
+    "keywords": [
+        "Laravel", "blade", "directive", "class", "classnames"
+    ],
+    "homepage": "https://github.com/pskordilakis/blade-class-directive",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Panagiotis Skordilakis",
+            "email": "p.skordilakis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PSkordilakis\\BladeClassDirective\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PSkordilakis\\BladeClassDirective\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
