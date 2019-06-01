@@ -5,9 +5,10 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 use PSkordilakis\BladeClassDirective\ClassNames;
 
-class ClassNamesTest extends TestCase {
-
-    public function test_processWithNoArguments () {
+class ClassNamesTest extends TestCase
+{
+    public function test_processWithNoArguments()
+    {
         $classNames = new ClassNames();
 
         $classes = $classNames->process();
@@ -15,7 +16,8 @@ class ClassNamesTest extends TestCase {
         $this->assertEquals($classes, '');
     }
 
-    public function test_processStringArgument () {
+    public function test_processStringArgument()
+    {
         $classNames = new ClassNames();
 
         $fixedClasses = 'someClass anotherClass';
@@ -23,10 +25,10 @@ class ClassNamesTest extends TestCase {
         $classes = $classNames->process($fixedClasses);
 
         $this->assertEquals($classes, $fixedClasses);
-
     }
 
-    public function test_processArrayArguments () {
+    public function test_processArrayArguments()
+    {
         $classNames = new ClassNames();
 
         $optionalClasses = [
@@ -40,7 +42,8 @@ class ClassNamesTest extends TestCase {
         $this->assertEquals($classes, 'someClass thirdClass');
     }
 
-    public function test_processMixedArguments () {
+    public function test_processMixedArguments()
+    {
         $classNames = new ClassNames();
 
         $fixedClasses = 'someClass anotherClass';
@@ -54,7 +57,8 @@ class ClassNamesTest extends TestCase {
         $this->assertEquals($classes, 'someClass anotherClass includedClass');
     }
 
-    public function test_withProcessMethod () {
+    public function test_withProcessMethod()
+    {
         $classNames = new ClassNames();
 
         $fixedClasses = 'someClass anotherClass';
@@ -68,7 +72,8 @@ class ClassNamesTest extends TestCase {
         $this->assertEquals($classes, 'someClass anotherClass includedClass');
     }
 
-    public function test_invokeInstance () {
+    public function test_invokeInstance()
+    {
         $classNames = new ClassNames();
 
         $fixedClasses = 'someClass anotherClass';
@@ -82,7 +87,8 @@ class ClassNamesTest extends TestCase {
         $this->assertEquals($classes, 'someClass anotherClass includedClass');
     }
 
-    public function test_helperFunction () {
+    public function test_helperFunction()
+    {
         $classNames = new ClassNames();
 
         $fixedClasses = 'someClass anotherClass';
