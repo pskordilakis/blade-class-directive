@@ -5,7 +5,7 @@ Inspired by [classnames](https://github.com/JedWatson/classnames) for react.
 ## Installation
 
 ``` bash
-composer require pskordilakis/blade-directive-class
+composer require pskordilakis/blade-class-directive
 ```
 
 ## Usage
